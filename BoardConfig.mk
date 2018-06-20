@@ -57,6 +57,10 @@ TARGET_KERNEL_SOURCE := kernel/samsung/exynos3475
 TARGET_KERNEL_CONFIG := lineage-gteslte_defconfig
 BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
 
+
+# HIDL Manifest
+DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/manifest.xml
+
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 13631488
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 15728640

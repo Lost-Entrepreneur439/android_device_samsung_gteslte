@@ -151,6 +151,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/mixer_paths_0.xml:system/etc/mixer_paths_0.xml
     
 PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio.effect@2.0-impl
+
+PRODUCT_PACKAGES += \
     audio.primary.universal3475 \
     audio.a2dp.default \
     audio.usb.default \

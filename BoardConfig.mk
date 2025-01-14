@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/j2lte
+LOCAL_PATH := device/samsung/gteslte
 
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
@@ -36,7 +36,7 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := cortex-a7
 
 # Extracted with libbootimg
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100
+BOARD_MKBOOTIMG_ARGS := -kernel_offset 0x00008000
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_IMAGE_NAME := zImage
 BOARD_KERNEL_PAGESIZE := 2048
@@ -54,7 +54,7 @@ TARGET_LINUX_KERNEL_VERSION := 3.10
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-eabi-
 KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.8/bin
 TARGET_KERNEL_SOURCE := kernel/samsung/exynos3475
-TARGET_KERNEL_CONFIG := lineage-j2lte_defconfig
+TARGET_KERNEL_CONFIG := gtesltecan_00_defconfig
 BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
 
 # Partitions
@@ -210,8 +210,8 @@ TW_EXCLUDE_SUPERSU := true
 endif
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_j2lte
-TARGET_RECOVERY_DEVICE_MODULES := libinit_j2lte
+TARGET_INIT_VENDOR_LIB := libinit_gteslte
+TARGET_RECOVERY_DEVICE_MODULES := libinit_gteslte
 
 # Seccomp filters
 BOARD_SECCOMP_POLICY += $(LOCAL_PATH)/seccomp
@@ -219,5 +219,7 @@ BOARD_SECCOMP_POLICY += $(LOCAL_PATH)/seccomp
 # SELinux
 BOARD_SEPOLICY_DIRS := $(LOCAL_PATH)/sepolicy
 
+TARGET_USES_ART := false
+
 # Inherit from the proprietary version
--include vendor/samsung/j2lte/BoardConfigVendor.mk
+-include vendor/samsung/gteslte/BoardConfigVendor.mk

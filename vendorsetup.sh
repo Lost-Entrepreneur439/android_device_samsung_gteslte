@@ -1,2 +1,2 @@
-add_lunch_combo lineage_j2lte-userdebug
-add_lunch_combo lineage_j2lte-eng
+add_lunch_combo lineage_gteslte-userdebug
+add_lunch_combo lineage_gteslte-eng

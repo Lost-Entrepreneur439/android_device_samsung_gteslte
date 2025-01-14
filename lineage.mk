@@ -15,22 +15,25 @@
 #
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/j2lte/device.mk)
+$(call inherit-product, device/samsung/gteslte/device.mk)
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common Lineage stuff.
+$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/cm/config/telephony.mk)
+
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_j2lte
-PRODUCT_DEVICE := j2lte
+PRODUCT_NAME := lineage_gteslte
+PRODUCT_DEVICE := gteslte
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := SM-J200F
+PRODUCT_MODEL := SM-T377W
 PRODUCT_MANUFACTURER := samsung
+PRODUCT_CHARACTERISTICS := tablet
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT="samsung/j2ltejv/j2lte:5.1.1/LMY47X/J200FXXS3ARI1:user/release-keys" \
-    PRIVATE_BUILD_DESC="j2ltejv-user 5.1.1 LMY47X J200FXXS3ARI1 release-keys"
+    BUILD_FINGERPRINT="samsung/gtesltebmc/gtesltebmc:7.1.1/NMF26X/T377WVLU3BRG4:user/release-keys" \
+    PRIVATE_BUILD_DESC="gtesltebmc-user 7.1.1 NMF26X T377WVLU3BRG4 release-keys"

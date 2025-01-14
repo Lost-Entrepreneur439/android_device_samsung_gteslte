@@ -16,7 +16,7 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-LOCAL_PATH := device/samsung/j2lte
+LOCAL_PATH := device/samsung/gteslte
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
@@ -25,8 +25,8 @@ PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # Boot animation
-TARGET_SCREEN_WIDTH := 540
-TARGET_SCREEN_HEIGHT := 960
+TARGET_SCREEN_WIDTH := 800
+TARGET_SCREEN_HEIGHT := 1280
 
 # Flat device tree for boot image
 PRODUCT_PACKAGES += \
@@ -184,4 +184,4 @@ $(call inherit-product, hardware/samsung_slsi/exynos3475/exynos3475.mk)
 $(call inherit-product, hardware/samsung_slsi/exynos5/exynos5.mk)
 
 # call the proprietary setup
-$(call inherit-product, vendor/samsung/j2lte/j2lte-vendor.mk)
+$(call inherit-product, vendor/samsung/gteslte/gteslte-vendor.mk)

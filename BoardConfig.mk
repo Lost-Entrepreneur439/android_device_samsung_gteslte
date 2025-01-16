@@ -36,7 +36,7 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := cortex-a7
 
 # Extracted with libbootimg
-BOARD_MKBOOTIMG_ARGS := -kernel_offset 0x00008000
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_IMAGE_NAME := zImage
 BOARD_KERNEL_PAGESIZE := 2048
@@ -192,7 +192,7 @@ WITH_DEXPREOPT := true
 #RECOVERY_VARIANT := twrp
 BOARD_HAS_DOWNLOAD_MODE := true
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/ramdisk/fstab.universal3475
-TARGET_OTA_ASSERT_DEVICE := j2lte, j2ltedd, j2ltedx
+TARGET_OTA_ASSERT_DEVICE := gteslte
 
 # TWRP
 ifeq ($(RECOVERY_VARIANT),twrp)
@@ -218,8 +218,6 @@ BOARD_SECCOMP_POLICY += $(LOCAL_PATH)/seccomp
 
 # SELinux
 BOARD_SEPOLICY_DIRS := $(LOCAL_PATH)/sepolicy
-
-TARGET_USES_ART := false
 
 # Inherit from the proprietary version
 -include vendor/samsung/gteslte/BoardConfigVendor.mk

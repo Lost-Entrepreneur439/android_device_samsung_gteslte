@@ -1,20 +1,18 @@
-Samsung Galaxy J2 (j2lte)
-=============
-This branch is for building LineageOS 14.1 (or Android Nougat 7.1 AOSP based ROMs).
+# Device Tree for Samsung Galaxy Tab E 8.0
 
-
-<img src="https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-j2-2.jpg" width="350" height="350"/>
+## Spec Sheet
 
 Basic   | Spec Sheet
--------------:|:-------------------------
-Chipset       | Exynos 3475 Quad (28 nm)
-CPU           | Quad-core 1.3 GHz Cortex-A7
-GPU           | Mali-T720
-Memory        | 1GB RAM
-Shipped OS    | Android 5.1.1
-Storage       | 8GB
-Battery       | Removable Li-Ion 2000 mAh
-Display       | Super AMOLED, 4.7" 540x960 px, 16:9 ratio (~234 ppi density)
-Main Camera   | 5 MP, f/2.2, AF
-Selfie Camera | 2 MP, f/2.2
-Sensors       | Accelerometer, proximity
+-------:|:-------------------------
+CPU     | Quad-core 1.3 GHz Cortex-A7
+Chipset | Exynos 3475 Quad (28 nm)
+GPU     | Mali-T720
+Storage/Memory  | 16GB 1.5GB RAM
+Shipped Android Version | Android 5.1.1 (Lollipop), upgradable to 7.1 (Nougat)
+MicroSD | microSDXC (dedicated slot)
+Battery | Li-Ion 5000 mAh, non-removable
+Display | 8.0 inches, 185.6 cm2 (~69.4% screen-to-body ratio)
+Camera  | 5 MP, f/2.2, AF
+
+## Device Picture
+![Samsung Galaxy Tab E 8.0](https://m.media-amazon.com/images/I/617nZbtYxIL._UF894,1000_QL80_.jpg)

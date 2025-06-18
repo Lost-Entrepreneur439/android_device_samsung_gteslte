@@ -192,7 +192,7 @@ WITH_DEXPREOPT := true
 #RECOVERY_VARIANT := twrp
 BOARD_HAS_DOWNLOAD_MODE := true
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/ramdisk/fstab.universal3475
-TARGET_OTA_ASSERT_DEVICE := j2lte, j2ltedd, j2ltedx
+TARGET_OTA_ASSERT_DEVICE := gteslte
 
 # TWRP
 ifeq ($(RECOVERY_VARIANT),twrp)

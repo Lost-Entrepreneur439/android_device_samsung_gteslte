@@ -90,13 +90,21 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AdvancedDisplay
 
+
 # Radio
 PRODUCT_PACKAGES += \
-    libxml2 \
-    libprotobuf-cpp-full \
+		android.hardware.radio@1.0 \
+		android.hardware.radio.deprecated@1.0 \
     libsecril-client \
     libsecril-client-sap \
+    rild \
+    libreference-ril \
+    libril \
     modemloader \
+    libxml2 \
+		libprotobuf-cpp-full
+
+PRODUCT_PACKAGES += \
     SamsungServiceMode
 
 # IPv6

@@ -17,15 +17,18 @@
 # Inherit from universal3475-common
 include device/samsung/universal3475-common/BoardConfigCommon.mk
 
-LOCAL_PATH := device/samsung/j2lte
+LOCAL_PATH := device/samsung/gteslte
 
-TARGET_OTA_ASSERT_DEVICE := j2lte,j2ltedd,j2ltedx
+TARGET_OTA_ASSERT_DEVICE := gteslte,gtesltetmo,gtesltebmc
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 
+# Include path
+TARGET_SPECIFIC_HEADER_PATH += $(LOCAL_PATH)/include
+
 # Display
-TARGET_SCREEN_DENSITY := 240
+TARGET_SCREEN_DENSITY := 213
 
 # Network Routing
 TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE := true
@@ -36,7 +39,7 @@ BOARD_PROVIDES_LIBRIL := true
 BOARD_NEEDS_ROAMING_PROTOCOL_FIELD := true
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_j2lte
+TARGET_INIT_VENDOR_LIB := libinit_gteslte
 
 # Partitions
 BOARD_HAS_NO_MISC_PARTITION:= false
@@ -50,7 +53,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 4831838208
 BOARD_FLASH_BLOCK_SIZE := 4096
 
 # Kernel
-TARGET_KERNEL_CONFIG := lineage-j2lte_defconfig
+TARGET_KERNEL_CONFIG := lineage-gteslte_defconfig
 
 # Shim
 TARGET_LD_SHIM_LIBS += \

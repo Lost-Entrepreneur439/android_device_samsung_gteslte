@@ -14,27 +14,27 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/j2lte
+LOCAL_PATH := device/samsung/gteslte
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_l_mr1.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_m.mk)
 
 # Inherit common Lineage phone.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := lineage_j2lte
-PRODUCT_DEVICE := j2lte
-PRODUCT_MODEL := SM-J200F
+PRODUCT_NAME := lineage_gteslte
+PRODUCT_DEVICE := gteslte
+PRODUCT_MODEL := SM-T377W
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=j2ltejv \
-    PRIVATE_BUILD_DESC="j2ltejv-user 5.1.1 LMY47X J200FXXS3ARI1 release-keys"
+    PRODUCT_NAME=gteslte \
+    PRIVATE_BUILD_DESC="gtesltebmc-user 7.1.1 NMF26X T377WVLU3BRG4 release-keys"
 
-BUILD_FINGERPRINT := samsung/j2ltejv/j2lte:5.1.1/LMY47X/J200FXXS3ARI1:user/release-keys
+BUILD_FINGERPRINT=samsung/gtesltebmc/gtesltebmc:7.1.1/NMF26X/T377WVLU3BRG4:user/release-keys
 
